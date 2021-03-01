@@ -7,19 +7,10 @@ services:
 
 before_install:
   - echo "start creatinf an image with dockerfile"
-<<<<<<< HEAD
-  - docker build -t chaeyeon2367/docker-react-app -f Dockerfile.env . 
-=======
-  -docker build -t chaeyeon2367/docker-react-app -f Dockerfile.dev .
-
->>>>>>> acf829ce1225291cace976d3c3c599893b7ca333
+  - docker build -t chaeyeon2367/docker-react-app -f Dockerfile.dev . 
 script:
   - docker run -e CI=true chaeyeon2367/docker-react-app npm run test -- --coverage
 
 after_success:
-<<<<<<< HEAD
   - echo "Test Success"
 
-=======
-  - echo "Test success"
->>>>>>> acf829ce1225291cace976d3c3c599893b7ca333
